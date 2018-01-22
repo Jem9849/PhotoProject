@@ -29,6 +29,13 @@ public class IntArrayWorker
     return total;
   }
   
+  public int getLargest()
+  {
+	  int largest = Integer.MIN_VALUE;
+	  
+	  for ()
+  }
+  
   /**
    * Method to return the total using a nested for-each loop
    * @return the total of the values in the array
