@@ -32,7 +32,7 @@ public class IntArrayWorkerTester
 //    int count = worker.getCount(1);
 //    System.out.println("Count should be 6 and count is " + count);
 //  }
-  
+  // 
   /** Method to test getTotal */
   public static void testGetTotal()
   {
@@ -66,17 +66,24 @@ public class IntArrayWorkerTester
 //    worker.setMatrix(nums3);
 //    largest = worker.getLargest();
 //    System.out.println("Largest should be 6 and is " + largest); 
-//    // test when largest is in the middle
-//    int[][] nums4 = {{1, 2, 3}, {6, 5, 1}};
-//    worker.setMatrix(nums4);
-//    largest = worker.getLargest();
-//    System.out.println("Largest should be 6 and is " + largest);
-//    // test when duplicate largest
-//    int[][] nums5 = {{6, 2, 6}, {4, 5, 1}};
-//    worker.setMatrix(nums5);
-//    largest = worker.getLargest();
-//    System.out.println("Largest should be 6 and is " + largest);
+//   // test when largest is in the middle
+//   int[][] nums4 = {{1, 2, 3}, {6, 5, 1}};
+//   worker.setMatrix(nums4);
+//   largest = worker.getLargest();
+//   System.out.println("Largest should be 6 and is " + largest);
+//   // test when duplicate largest
+//   int[][] nums5 = {{6, 2, 6}, {4, 5, 1}};
+//   worker.setMatrix(nums5);
+//   largest = worker.getLargest();
+//   System.out.println("Largest should be 6 and is " + largest);
+  
+//    for (int count = 0; count < worker.length; count++)
+//         for(int count2 = 0; count2 < worker[0].length; count2++)
+//          {  
+
+//          }
 //  }
+  // I will make it so it goes through each row and column to find the largest number, and I'll do this for each table.
   
   /** Method to test getColTotal */
 //  public static void testGetColTotal()
@@ -85,13 +92,16 @@ public class IntArrayWorkerTester
 //    int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
 //    worker.setMatrix(nums2);
 //    int total = worker.getColTotal(0);
+//    for (int count = 0; 0 < worker[0].length; count++)
+//    {
 //    System.out.println("Total for column 0 should be 5 and is " + total);
 //    total = worker.getColTotal(1);
 //    System.out.println("Total for column 1 should be 7 and is " + total);
 //    total = worker.getColTotal(2);
 //    System.out.println("Total for column 2 should be 9 and is " + total);
+//    }
 //  }
-  
+  // Would try and make it so it goes through the columns and totals each one.
   public static void main(String[] args)
   {
     testSetMatrix();
