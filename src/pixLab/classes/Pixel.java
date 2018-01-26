@@ -352,6 +352,23 @@ public class Pixel
    double average = (getRed() + getGreen() + getBlue()) / 3.0;
    return average;
  }
+ 
+ /**
+  * Method to check whether a pixel is transparent.
+  * @return whether the pixel transparency is true or false.
+  */
+ 
+ public boolean isTransparent()
+ {
+	 boolean isTransparent = false;
+	 
+	 if (getAlpha() == 255 && getRed() == 0 && getGreen() == 0 && getBlue() == 0)
+	 {
+		 isTransparent = true;
+	 }
+	 
+	 return isTransparent;
+ }
   
   /**
    * Method to return a string with information about this pixel
