@@ -209,6 +209,37 @@ public class Picture extends SimplePicture
 	  }
 	 
   }
+  
+  /**
+   * A method that is suppose to wrap around vertical axis, copy colors onto other pixels of only red and blue values, and randomize 2-4 regions.
+   */
+  public void glitchFilter()
+  {
+	  Pixel[][] firstPixels = this.getPixels2D();
+	  int width = firstPixels.length;
+	  
+	  for (int startCol = 0; startCol < firstPixels[0].length; startCol++)
+	  {
+		  for (int startRow = 0; startRow < firstPixels.length; startRow++)
+		  {
+			  firstPixels[startCol][startRow] = firstPixels[(startCol + 5) % width ][(startRow + 5) % width];
+		  }
+	  }
+	  
+//	  for (int startCol = 0; startCol < firstPixels.length; startCol++)
+//	  {
+//		  for (int startRow = 0; startRow < firstPixels[0].length; startRow++)
+//		  {
+//			  int blue = firstPixels[startCol][startRow].getBlue();
+//			  int red = firstPixels[startCol][startRow].getRed();
+//			  Color temp = (blue, 0, red);
+//			  firstPixels[startCol + 15][startRow + 15].setColor(temp);
+//		  }
+//	  }
+	  
+	  
+	  
+  }
 
   /** Method to create a collage of several pictures */
   public void createCollage()
@@ -264,6 +295,7 @@ public class Picture extends SimplePicture
     beach.explore();
     beach.zeroBlue();
     beach.explore();
+    beach.glitchFilter();
   }
   
 } // this } is the end of class Picture, put all new methods before this
