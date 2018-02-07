@@ -262,9 +262,16 @@ public class Picture extends SimplePicture
 	  
   }
   
+  /**
+   * Method for copying the color of a Bob Ross picture to another picture that has a color distance less than 100 to orange. It also mirrors 80% of the picture.
+   * @param fromPic The picture to copy/original picture.
+   * @param startRow The starting row.
+   * @param startCow The starting col.
+   */
   public void bobRoss(Picture fromPic, int startRow, int startCow)
   {
-	  
+	  Pixel [][] pixels = this.getPixels2D();
+	  Picture imageRoss = new Picture("BobRoss.png");
   }
 
   /** Method to create a collage of several pictures */
