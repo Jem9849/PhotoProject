@@ -261,6 +261,11 @@ public class Picture extends SimplePicture
 	  
 	  
   }
+  
+  public void bobRoss(Picture fromPic, int startRow, int startCow)
+  {
+	  
+  }
 
   /** Method to create a collage of several pictures */
   public void createCollage()
