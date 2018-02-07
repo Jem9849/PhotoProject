@@ -215,27 +215,46 @@ public class Picture extends SimplePicture
    */
   public void glitchFilter()
   {
-	  Pixel[][] firstPixels = this.getPixels2D();
-	  int width = firstPixels.length;
-	  
-	  for (int startCol = 0; startCol < firstPixels[0].length; startCol++)
-	  {
-		  for (int startRow = 0; startRow < firstPixels.length; startRow++)
-		  {
-			  firstPixels[startCol][startRow] = firstPixels[(startCol + 5) % width ][(startRow + 5) % width];
-		  }
-	  }
-	  
-//	  for (int startCol = 0; startCol < firstPixels.length; startCol++)
+//	  Pixel[][] firstPixels = this.getPixels2D();
+//	  int width = firstPixels.length;
+//	  
+//	  for (int startCol = 0; startCol < firstPixels[0].length; startCol++)
 //	  {
-//		  for (int startRow = 0; startRow < firstPixels[0].length; startRow++)
+//		  for (int startRow = 0; startRow < firstPixels.length; startRow++)
 //		  {
-//			  int blue = firstPixels[startCol][startRow].getBlue();
-//			  int red = firstPixels[startCol][startRow].getRed();
-//			  Color temp = (blue, 0, red);
-//			  firstPixels[startCol + 15][startRow + 15].setColor(temp);
+//			  firstPixels[startCol][startRow] = firstPixels[(startCol + 5) % width ][(startRow + 5) % width];
 //		  }
 //	  }
+//	  
+////	  for (int startCol = 0; startCol < firstPixels.length; startCol++)
+////	  {
+////		  for (int startRow = 0; startRow < firstPixels[0].length; startRow++)
+////		  {
+////			  int blue = firstPixels[startCol][startRow].getBlue();
+////			  int red = firstPixels[startCol][startRow].getRed();
+////			  Color temp = (blue, 0, red);
+////			  firstPixels[startCol + 15][startRow + 15].setColor(temp);
+////		  }
+////	  }
+	  
+	  Pixel [][] pixels = this.getPixels2D();
+	  int shiftAmount = (int) (.15 * pixels[0].length);
+	  int width = pixels[0].length;
+	  
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+		  Color [] currentColors = new Color[pixels[0].length];
+		  
+		  for (int col = 0; col < pixels[row].length; col++)
+		  {
+			  currentColors[col] = pixels[row][col].getColor();
+		  }
+		  
+		  for (int col = 0; col < pixels[0].length; col++)
+		  {
+			  pixels[row][col].setColor(currentColors[(col + shiftAmount) % width]);
+		  }
+	  }
 	  
 	  
 	  
