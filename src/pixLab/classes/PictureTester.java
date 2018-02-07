@@ -18,6 +18,13 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testGlitch()
+  {
+	  Picture sample = new Picture("austin.png");
+	  sample.glitchFilter();
+	  sample.explore();
+  }
+  
   /**
    * Method to add in the Austin filter to the beach image. 
    */
@@ -72,6 +79,7 @@ public class PictureTester
     // to run
 	testAustin();
     testZeroBlue();
+    testGlitch();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();

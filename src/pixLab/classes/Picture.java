@@ -258,6 +258,8 @@ public class Picture extends SimplePicture
 	  
 	  
 	  
+	  
+	  
   }
 
   /** Method to create a collage of several pictures */
