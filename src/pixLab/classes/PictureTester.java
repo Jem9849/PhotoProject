@@ -82,8 +82,8 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-	testAustin();
-    testZeroBlue();
+	//testAustin();
+    //testZeroBlue();
     testGlitch();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
@@ -91,7 +91,7 @@ public class PictureTester
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    testMirrorVertical();
+    //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();

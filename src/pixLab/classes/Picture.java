@@ -238,7 +238,7 @@ public class Picture extends SimplePicture
 ////	  }
 	  
 	  Pixel [][] pixels = this.getPixels2D();
-	  int shiftAmount = (int) (.15 * pixels[0].length);
+	  int shiftAmount = (int) (.35 * pixels[0].length);
 	  int width = pixels[0].length;
 	  
 	  for (int row = 0; row < pixels.length; row++)
