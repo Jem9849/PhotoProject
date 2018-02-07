@@ -18,9 +18,14 @@ public class PictureTester
     beach.explore();
   }
   
+  /**
+   * Method to test glitchFilter.
+   */
+  
   public static void testGlitch()
   {
-	  Picture sample = new Picture("austin.png");
+	  Picture sample = new Picture("terrain.jpeg");
+	  sample.explore();
 	  sample.glitchFilter();
 	  sample.explore();
   }
