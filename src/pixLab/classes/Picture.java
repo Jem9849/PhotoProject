@@ -281,6 +281,9 @@ public class Picture extends SimplePicture
 	    int minWidth = 20;
 	    Pixel leftPix = null;
 	    Pixel rightPix = null;
+	    Pixel [][] pixels2D = this.getPixels2D();
+	    
+	    
 	  
 	  
 	  
