@@ -257,6 +257,30 @@ public class Picture extends SimplePicture
 	  }
 	  
 	  
+	  	int endHeight = 300;
+	  	int endWidth = 300;
+	    Pixel leftPixel = null;
+	    Pixel rightPixel = null;
+	    Pixel [][] pixs = this.getPixels2D();
+	    
+	    // loop 5 just before mirror through the rows
+	    for (int row = 5; row < endWidth; row++)
+	    {
+	      // loop from 5 to just before the mirror point
+	      for (int col = 5; col < endHeight; col++)
+	      {
+	        
+	        leftPixel = pixs[row][col];      
+	        rightPixel = pixs[endWidth - row + endWidth]                       
+	                         [endHeight - col + endHeight];
+	        rightPixel.setColor(leftPixel.getBlue(), rightPixel.getGreen(), leftPixel.getRed());
+	      }
+	    }
+	    
+	    int minHeight = 20;
+	    int minWidth = 20;
+	    Pixel leftPix = null;
+	    Pixel rightPix = null;
 	  
 	  
 	  

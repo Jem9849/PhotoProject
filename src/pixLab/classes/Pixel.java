@@ -212,6 +212,7 @@ public class Pixel
     return new Color(red,green,blue);
   }
   
+  
   /**
    * Method to set the pixel color to the passed in color object.
    * @param newColor the new color to use
@@ -225,6 +226,17 @@ public class Pixel
     
     // update the associated picture
     updatePicture(this.getAlpha(),red,green,blue);
+  }
+  
+  /**
+   * Method to set color more manually.
+   * @param red The red color of a pixel.
+   * @param green The green color of a pixel.
+   * @param blue The blue color of a pixel.
+   */
+  public void setColor (int red, int green, int blue)
+  {
+	 updatePicture(this.getAlpha(), red, green, blue);
   }
   
   /**
