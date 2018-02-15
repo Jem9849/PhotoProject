@@ -293,8 +293,8 @@ public class Picture extends SimplePicture
 	    		{
 	    			leftPix = pixels2D[row][col];
 	    			rightPix = pixels2D[maxWidth - row + maxWidth][maxHeight - col + maxHeight];
-	    			leftPix.setColor((int) Math.random() * 256, (int) Math.random() * 256, (int) Math.random() * 256);
-	    			rightPix.setColor((int) Math.random() * 256, (int) Math.random() * 256, (int) Math.random() * 256);
+	    			leftPix.setColor((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256));
+	    			rightPix.setColor((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256));
 	    		}
 	    	}
 	    }
