@@ -279,14 +279,25 @@ public class Picture extends SimplePicture
 	    
 	    int minHeight = 20;
 	    int minWidth = 20;
+	    int maxHeight = 260;
+	    int maxWidth = 260;
 	    Pixel leftPix = null;
 	    Pixel rightPix = null;
 	    Pixel [][] pixels2D = this.getPixels2D();
 	    
-	    
-	  
-	  
-	  
+	    for (int row = 20; row < maxWidth; row++)
+	    {
+	    	for (int col = 20; col < maxHeight; col++)
+	    	{
+	    		if (row % minWidth == 0 && col % minHeight == 0)
+	    		{
+	    			leftPix = pixels2D[row][col];
+	    			rightPix = pixels2D[maxWidth - row + maxWidth][maxHeight - col + maxHeight];
+	    			leftPix.setColor((int) Math.random() * 256, (int) Math.random() * 256, (int) Math.random() * 256);
+	    			rightPix.setColor((int) Math.random() * 256, (int) Math.random() * 256, (int) Math.random() * 256);
+	    		}
+	    	}
+	    }
   }
   
   /**
