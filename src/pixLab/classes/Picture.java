@@ -289,7 +289,7 @@ public class Picture extends SimplePicture
 	    {
 	    	for (int col = 20; col < maxHeight; col++)
 	    	{
-	    		if (row % minWidth == 0 && col % minHeight == 0)
+	    		if (!(row % minWidth == 0) && !(col % minHeight == 0))
 	    		{
 	    			leftPix = pixels2D[row][col];
 	    			rightPix = pixels2D[maxWidth - row + maxWidth][maxHeight - col + maxHeight];
