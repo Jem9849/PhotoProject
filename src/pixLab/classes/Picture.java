@@ -323,19 +323,18 @@ public class Picture extends SimplePicture
 		  for (int toCol = startCol; fromCol < fromPixels[0].length && toCol < 
 				  toPixels[0].length; toCol++)
 		  {
-			  if (fromPixels[fromRow][fromCol].colorDistance(Color.ORANGE) < 180)
-			  {
 				 fromPixel = fromPixels[fromRow][fromCol];
 				 toPixel = toPixels[toRow][toCol];
 				 
-				 if(!(fromPixel.isTransparent()))
+				 if (fromPixel.colorDistance(Color.ORANGE) < 180)
 				 {
-					 toPixel.setColor(fromPixel.getColor());
+					 if(!(fromPixel.isTransparent()))
+					 {
+						 toPixel.setColor(fromPixel.getColor());
+					 }
+					 fromCol++;
 				 }
-				  fromCol++;
-			  }
 		  }
-		  
 		  fromRow++;
 	  }
   }
