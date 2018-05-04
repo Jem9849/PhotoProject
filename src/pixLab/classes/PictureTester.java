@@ -46,7 +46,7 @@ public class PictureTester
    */
   public static void testRoss()
   {
-	  Picture sample = new Picture("terrain.jpeg");
+	  Picture sample = new Picture("beach.jpg");
 	  sample.explore();
 	  sample.bobRoss(sample.getHeight()/2, sample.getWidth()/2);
 	  sample.explore();

@@ -311,9 +311,9 @@ public class Picture extends SimplePicture
 	  Pixel  fromPixel = null;
 	  Pixel  toPixel = null;
 			 
-	  Pixel [][] fromPixels = this.getPixels2D();
+	  Pixel [][] toPixels = this.getPixels2D();
 	  Picture imageRoss = new Picture("BobRoss.png");
-	  Pixel [][] toPixels = imageRoss.getPixels2D();
+	  Pixel [][] fromPixels = imageRoss.getPixels2D();
 	  
 	  int fromRow = 0;
 	  for (int toRow = startRow; fromRow < fromPixels.length && toRow < toPixels.length; 
