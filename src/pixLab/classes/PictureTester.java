@@ -50,6 +50,7 @@ public class PictureTester
 	  sample.explore();
 	  sample.bobRoss(sample.getHeight()/2, sample.getWidth()/2);
 	  sample.explore();
+	  sample.write("JeremySaysanasyClassFilter");
   }
   
   /** Method to test mirrorVertical */

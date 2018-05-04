@@ -326,14 +326,14 @@ public class Picture extends SimplePicture
 				 fromPixel = fromPixels[fromRow][fromCol];
 				 toPixel = toPixels[toRow][toCol];
 				 
-				 if (fromPixel.colorDistance(Color.ORANGE) < 180)
-				 {
 					 if(!(fromPixel.isTransparent()))
 					 {
-						 toPixel.setColor(fromPixel.getColor());
+						 if (fromPixel.colorDistance(Color.ORANGE) < 180)
+						 {
+							 toPixel.setColor(fromPixel.getColor());
+						 }
 					 }
 					 fromCol++;
-				 }
 		  }
 		  fromRow++;
 	  }
