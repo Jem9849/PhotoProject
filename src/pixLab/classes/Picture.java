@@ -306,30 +306,37 @@ public class Picture extends SimplePicture
    * @param startRow The starting row.
    * @param startCow The starting col.
    */
-  public void bobRoss() //(Picture fromPic, int startRow, int startCow)
+  public void bobRoss(int startRow, int startCol)
   {
-	  Pixel [][] pixels = this.getPixels2D();
+	  Pixel  fromPixel = null;
+	  Pixel  toPixel = null;
+			 
+	  Pixel [][] fromPixels = this.getPixels2D();
 	  Picture imageRoss = new Picture("BobRoss.png");
-	  Pixel [][] rossPixels = imageRoss.getPixels2D();
+	  Pixel [][] toPixels = imageRoss.getPixels2D();
 	  
-	  for (int c = 0; c < pixels.length; c++)
+	  int fromRow = 0;
+	  for (int toRow = startRow; fromRow < fromPixels.length && toRow < toPixels.length; 
+			  toRow++)
 	  {
-		  for (int a = 0; a < pixels[0].length; a++)
+		  int fromCol = 0;
+		  for (int toCol = startCol; fromCol < fromPixels[0].length && toCol < 
+				  toPixels[0].length; toCol++)
 		  {
-			  if (pixels[c][a].colorDistance(Color.ORANGE) < 180)
+			  if (fromPixels[fromRow][fromCol].colorDistance(Color.ORANGE) < 180)
 			  {
-				  for (int i = 0; i < rossPixels.length; i++)
-				  {
-					  for (int b = 0; b < rossPixels[0].length; i++)
-					  {
-						  if (!(rossPixels[c][a].isTransparent()))
-						  {
-							 pixels[c][a] = rossPixels[i][b]; 
-						  }
-					  }  
-				  }
+				 fromPixel = fromPixels[fromRow][fromCol];
+				 toPixel = toPixels[toRow][toCol];
+				 
+				 if(!(fromPixel.isTransparent()))
+				 {
+					 toPixel.setColor(fromPixel.getColor());
+				 }
+				  fromCol++;
 			  }
 		  }
+		  
+		  fromRow++;
 	  }
   }
 
