@@ -306,10 +306,31 @@ public class Picture extends SimplePicture
    * @param startRow The starting row.
    * @param startCow The starting col.
    */
-  public void bobRoss(Picture fromPic, int startRow, int startCow)
+  public void bobRoss() //(Picture fromPic, int startRow, int startCow)
   {
 	  Pixel [][] pixels = this.getPixels2D();
 	  Picture imageRoss = new Picture("BobRoss.png");
+	  Pixel [][] rossPixels = imageRoss.getPixels2D();
+	  
+	  for (int c = 0; c < pixels.length; c++)
+	  {
+		  for (int a = 0; a < pixels[c].length; a++)
+		  {
+			  if (pixels[c][a].colorDistance(Color.ORANGE) < 180)
+			  {
+				  for (int i = 0; i < rossPixels.length; i++)
+				  {
+					  for (int b = 0; b < rossPixels[i].length; i++)
+					  {
+						  if (!(rossPixels[c][a].isTransparent()))
+						  {
+							 pixels[c][a] = rossPixels[c][a]; 
+						  }
+					  }  
+				  }
+			  }
+		  }
+	  }
   }
 
   /** Method to create a collage of several pictures */
