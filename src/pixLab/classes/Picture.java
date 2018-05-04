@@ -314,17 +314,17 @@ public class Picture extends SimplePicture
 	  
 	  for (int c = 0; c < pixels.length; c++)
 	  {
-		  for (int a = 0; a < pixels[c].length; a++)
+		  for (int a = 0; a < pixels[0].length; a++)
 		  {
 			  if (pixels[c][a].colorDistance(Color.ORANGE) < 180)
 			  {
 				  for (int i = 0; i < rossPixels.length; i++)
 				  {
-					  for (int b = 0; b < rossPixels[i].length; i++)
+					  for (int b = 0; b < rossPixels[0].length; i++)
 					  {
 						  if (!(rossPixels[c][a].isTransparent()))
 						  {
-							 pixels[c][a] = rossPixels[c][a]; 
+							 pixels[c][a] = rossPixels[i][b]; 
 						  }
 					  }  
 				  }

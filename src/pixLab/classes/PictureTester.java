@@ -41,6 +41,17 @@ public class PictureTester
 	  sample.explore();
   }
   
+  /**
+   *  Suppose to add bobRoss's face as a filter
+   */
+  public static void testRoss()
+  {
+	  Picture sample = new Picture("beach.jpg");
+	  sample.explore();
+	  sample.bobRoss();
+	  sample.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -84,7 +95,8 @@ public class PictureTester
     // to run
 	//testAustin();
     //testZeroBlue();
-    testGlitch();
+    //testGlitch();
+    testRoss();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
